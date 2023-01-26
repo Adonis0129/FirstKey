@@ -3,6 +3,8 @@ import PhoneInput from "react-phone-input-2";
 import RentImg from '../../assets/images/rent.jpg'
 import FirstKeyImg from '../../assets/images/first-key.png'
 import { DateInput } from '../../components/DateInput';
+import { DragDropFile } from '../../components/DragAndDrop';
+
 import './dashboard.scss'
 
 export const Dashboard = () => {
@@ -415,11 +417,7 @@ export const Dashboard = () => {
 									<div className='form-label-top'>Front Government ID</div>
 									<div className='form-line'>
 										<div className='form-input-wrap-full'>
-											<input
-												id='fileUpload' 
-												type='file' 
-												multiple
-											/>
+											<DragDropFile/>
 										</div>
 									</div>
 								</div>
@@ -427,14 +425,7 @@ export const Dashboard = () => {
 									<div className='form-label-top'>Back Government ID</div>
 									<div className='form-line'>
 										<div className='form-input-wrap-full'>
-											<div className='form-file-upload-Cotainer' role='button'>
-												<input
-													className='fileupload-input'
-													id='fileUpload' 
-													type='file' 
-													multiple
-												/>
-											</div>
+											<DragDropFile/>
 										</div>
 									</div>
 								</div>
@@ -442,11 +433,7 @@ export const Dashboard = () => {
 									<div className='form-label-top'>Self Government ID</div>
 									<div className='form-line'>
 										<div className='form-input-wrap-full'>
-											<input
-												id='fileUpload' 
-												type='file' 
-												multiple
-											/>
+											<DragDropFile/>
 										</div>
 									</div>
 								</div>

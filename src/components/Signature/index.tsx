@@ -1,6 +1,6 @@
-import React, { useRef, useState, useEffect } from 'react';
-import SignatureCanvas from 'react-signature-canvas';
-import './style.css';
+// import React, { useRef, useState, useEffect } from 'react';
+// import SignatureCanvas from 'react-signature-canvas';
+// import './style.css';
 
 export const Signature = () => {
 
