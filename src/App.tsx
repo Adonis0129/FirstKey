@@ -1,6 +1,6 @@
 import { BrowserRouter, Switch, Route } from 'react-router-dom'
 import { Dashboard } from './pages/dashboard'
-import { NotFound } from './components/NotFound'
+import { NotFound } from './components/NotFoundPage'
 import "./index.scss"
 
 function App() {

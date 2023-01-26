@@ -12,7 +12,7 @@ export const DateInput = () => {
   const [value, setValue] = React.useState<Dayjs | null>(dayjs('2023-01-25'));
 
   return (
-    <LocalizationProvider dateAdapter={AdapterDayjs}>
+    <LocalizationProvider dateAdapter={AdapterDayjs} >
       <DatePicker
         label="Custom input"
         value={value}

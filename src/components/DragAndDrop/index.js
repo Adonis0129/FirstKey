@@ -48,7 +48,7 @@ export const DragDropFile = () => {
         <input ref={inputRef} type="file" id="input-file-upload" multiple={true} onChange={handleChange} />
         <label id="label-file-upload" htmlFor="input-file-upload" className={dragActive ? "drag-active" : "" }>
           <div>
-            <CloudUploadIcon/>
+            <CloudUploadIcon  fontSize='large'/>
             <p>Browse Files</p>
             <button className="upload-button" onClick={onButtonClick}>Drag and drop files here</button>
           </div> 

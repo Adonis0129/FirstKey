@@ -1,12 +1,19 @@
 import React from 'react';
-import PhoneInput from "react-phone-input-2";
 import RentImg from '../../assets/images/rent.jpg'
 import FirstKeyImg from '../../assets/images/first-key.png'
-import { DateInput } from '../../components/DateInput';
+import { FullName } from '../../components/FullName';
+import { Email } from '../../components/Email';
+import { PhoneNumber } from '../../components/PhoneNumber';
+import { PreferredData } from '../../components/PreferredData';
+import { Address } from '../../components/Address';
+import { Employment } from '../../components/Employment';
+import { FloorPlan } from '../../components/FloorPlan';
+
 import { DragDropFile } from '../../components/DragAndDrop';
 import { Signature } from '../../components/Signature';
+import { PaymentMethod } from '../../components/PaymentMethod';
 
-import './dashboard.scss'
+import '../../assets/styles/style.scss';
 
 export const Dashboard = () => {
 	
@@ -23,273 +30,15 @@ export const Dashboard = () => {
 								<img src={FirstKeyImg} alt='firstkeyImg' width={200} height={150}/>
 							</div>
 							<div className='form-body'>
-								<div className='form-section-wrap'>
-									<div className='form-label-top'>Full Name</div>
-									<div className='form-line'>
-										<div className='form-input-wrap-divide'>
-											<input
-												className='form-input' 
-												type='text' 
-												id='first_name' 
-											/>
-											<div className='form-sub-label'>First Name</div>
-										</div>
-										<div className='form-input-wrap-divide'>
-											<input
-												className='form-input' 
-												type='text' 
-												id='last_name' 
-											/>
-											<div className='form-sub-label'>Last Name</div>
-										</div>
-									</div>
-								</div>
-								<div className='form-section-wrap'>
-									<div className='form-label-top'>E-mail</div>
-									<div className='form-line'>
-										<div className='form-input-wrap-full'>
-											<input
-												className='form-input' 
-												type='email' 
-												id='email'
-												name="email"
-												placeholder='ex: myname@example.com'
-											/>
-											<div className='form-sub-label'>example@example.com</div>
-										</div>
-									</div>
-								</div>
-								<div className='form-section-wrap'>
-									<div className='form-label-top'>Phone Number</div>
-									<div className='form-line'>
-										<div className='form-input-wrap-full'>
-										<PhoneInput
-											// value={phoneNumber}
-											// onChange={(phone) => setPhoneNumber(phone)}
-											specialLabel=''
-											inputProps={{
-											name: 'phone',
-											required: true,
-											autoFocus: true
-											}}
-											inputClass='form-input'
-											dropdownStyle={{ height: "110px", width:'auto' }} 
-										/>
-											<div className='form-sub-label'>Please enter a vaild phone number</div>
-										</div>
-									</div>
-								</div>
-								<div className='form-section-wrap'>
-									<div className='form-label-top'>Address</div>
-									<div className='form-line'>
-										<div className='form-input-wrap-full'>
-											<input
-												className='form-input' 
-												type='text' 
-												id='address'
-												name="address"
-											/>
-											<div className='form-sub-label'>Street Address</div>
-										</div>
-									</div>
-									<div className='form-line'>
-										<div className='form-input-wrap-full'>
-											<input
-												className='form-input' 
-												type='text' 
-												id='address'
-												name="address"
-											/>
-											<div className='form-sub-label'>Street Address Line2</div>
-										</div>
-									</div>
-									<div className='form-line'>
-										<div className='form-input-wrap-divide'>
-											<input
-												className='form-input' 
-												type='text' 
-												id='city'
-												name="city"
-											/>
-											<div className='form-sub-label'>City</div>
-										</div>
-										<div className='form-input-wrap-divide'>
-											<input
-												className='form-input' 
-												type='text' 
-												id='state'
-												name="state"
-											/>
-											<div className='form-sub-label'>State/Province</div>
-										</div>
-									</div>
-									<div className='form-line'>
-										<div className='form-input-wrap-divide'>
-											<input
-												className='form-input' 
-												type='number' 
-												id='postcode'
-												name="postcode"
-											/>
-											<div className='form-sub-label'>Postal/Zip Code</div>
-										</div>
-										<div className='form-input-wrap-divide'>
-											<input
-												className='form-input' 
-												type='text' 
-												id='state'
-												name="state"
-											/>
-											<div className='form-sub-label'>Country</div>
-										</div>
-									</div>
-								</div>
-								<div className='form-section-wrap'>
-									<div className='form-label-top'>Are you currently employed?</div>
-									<div className=''>
-										<div>
-											<input 
-												type="radio" 
-												id="choice1"
-												name="employ" 
-												value="yes"/>
-											<label htmlFor="choice1" className='form-label-top'>Yes</label>
-										</div>
-										<div>
-											<input 
-												type="radio" 
-												id="choice2"
-												name="employ" 
-												value="no"/>
-											<label htmlFor="choice2" className='form-label-top'>No</label>
-										</div>
-									</div>
-								</div>
-								<div className='form-section-wrap'>
-									<div className='form-label-top'>Length of Employment</div>
-									<div className='form-line'>
-										<div className='form-input-wrap-full'>
-											<input
-												className='form-input' 
-												type='text' 
-												id='length_of_employment'
-												name="length_of_employment"
-											/>
-										</div>
-									</div>
-								</div>
-								<div className='form-section-wrap'>
-									<div className='form-label-top'>Occupation?</div>
-									<div className='form-line'>
-										<div className='form-input-wrap-full'>
-											<input
-												className='form-input' 
-												type='text' 
-												id='occupation'
-												name="occupation"
-											/>
-										</div>
-									</div>
-								</div>
-								<div className='form-section-wrap'>
-									<div className='form-label-top'>Monthly Salary(USD)</div>
-									<div className='form-line'>
-										<div className='form-input-wrap-full'>
-											<input
-												className='form-input' 
-												type='text' 
-												id='salary'
-												name="salary"
-											/>
-										</div>
-									</div>
-								</div>
-								<div className='form-section-wrap'>
-									<div className='form-label-top'>Preferred Move in Data</div>
-									<div className='form-line'>
-										<div className='form-input-wrap-full'>
-											<DateInput/>
-										</div>
-									</div>
-								</div>
-								<div className='form-section-wrap'>
-									<div className='form-label-top'>Address of Residence</div>
-									<div className='form-line'>
-										<div className='form-input-wrap-full'>
-											<input
-												className='form-input' 
-												type='text' 
-												id='address'
-												name="address"
-											/>
-											<div className='form-sub-label'>Street Address</div>
-										</div>
-									</div>
-									<div className='form-line'>
-										<div className='form-input-wrap-full'>
-											<input
-												className='form-input' 
-												type='text' 
-												id='address'
-												name="address"
-											/>
-											<div className='form-sub-label'>Street Address Line2</div>
-										</div>
-									</div>
-									<div className='form-line'>
-										<div className='form-input-wrap-divide'>
-											<input
-												className='form-input' 
-												type='text' 
-												id='city'
-												name="city"
-											/>
-											<div className='form-sub-label'>City</div>
-										</div>
-										<div className='form-input-wrap-divide'>
-											<input
-												className='form-input' 
-												type='text' 
-												id='state'
-												name="state"
-											/>
-											<div className='form-sub-label'>State/Province</div>
-										</div>
-									</div>
-									<div className='form-line'>
-										<div className='form-input-wrap-divide'>
-											<input
-												className='form-input' 
-												type='number' 
-												id='postcode'
-												name="postcode"
-											/>
-											<div className='form-sub-label'>Postal/Zip Code</div>
-										</div>
-										<div className='form-input-wrap-divide'>
-											<input
-												className='form-input' 
-												type='text' 
-												id='state'
-												name="state"
-											/>
-											<div className='form-sub-label'>Country</div>
-										</div>
-									</div>
-								</div>
-								<div className='form-section-wrap'>
-									<div className='form-label-top'>Preferred Floor Plan</div>
-									<div className='form-line'>
-										<div className='form-input-wrap-full'>
-											<input
-												className='form-input' 
-												type='text' 
-												id='salary'
-												name="salary"
-											/>
-										</div>
-									</div>
-								</div>
+								<FullName/>
+								<Email/>
+								<PhoneNumber/>
+								<Address/>
+								<Employment/>
+								<PreferredData/>
+								<Address/>
+								<FloorPlan/>
+								{/* How much do you have at hand now to secure the property? (USD) */}
 								<div className='form-section-wrap'>
 									<div className='form-label-top'>How much do you have at hand now to secure the property? (USD)</div>
 									<div className='form-line'>
@@ -303,10 +52,11 @@ export const Dashboard = () => {
 										</div>
 									</div>
 								</div>
+								{/* Do you have pets? */}
 								<div className='form-section-wrap'>
 									<div className='form-label-top'>Do you have pets?</div>
 									<div className=''>
-										<div>
+										<div className='form-radio'>
 											<input 
 												type="radio" 
 												id="choicePet1"
@@ -314,7 +64,7 @@ export const Dashboard = () => {
 												value="yes"/>
 											<label htmlFor="choicePet1" className='form-label-top'>Yes</label>
 										</div>
-										<div>
+										<div className='form-radio'>
 											<input 
 												type="radio" 
 												id="choicePet2"
@@ -324,6 +74,7 @@ export const Dashboard = () => {
 										</div>
 									</div>
 								</div>
+								{/* Please describe all pets */}
 								<div className='form-section-wrap'>
 									<div className='form-label-top'>Please describe all pets</div>
 									<div className='form-line'>
@@ -338,10 +89,11 @@ export const Dashboard = () => {
 										</div>
 									</div>
 								</div>
+								{/* Have you ever been evicted? */}
 								<div className='form-section-wrap'>
 									<div className='form-label-top'>Have you ever been evicted?</div>
 									<div className=''>
-										<div>
+										<div className='form-radio'>
 											<input 
 												type="radio" 
 												id="choiceEvict1"
@@ -349,7 +101,7 @@ export const Dashboard = () => {
 												value="yes"/>
 											<label htmlFor="choiceEvict1" className='form-label-top'>Yes</label>
 										</div>
-										<div>
+										<div className='form-radio'>
 											<input 
 												type="radio" 
 												id="choiceEvict2"
@@ -359,10 +111,11 @@ export const Dashboard = () => {
 										</div>
 									</div>
 								</div>
+								{/* Have you ever been convicted of a felony? */}
 								<div className='form-section-wrap'>
 									<div className='form-label-top'>Have you ever been convicted of a felony?</div>
 									<div className=''>
-										<div>
+										<div className='form-radio'>
 											<input 
 												type="radio" 
 												id="choiceConvict1"
@@ -370,7 +123,7 @@ export const Dashboard = () => {
 												value="yes"/>
 											<label htmlFor="choiceConvict1" className='form-label-top'>Yes</label>
 										</div>
-										<div>
+										<div className='form-radio'>
 											<input 
 												type="radio" 
 												id="choiceConvict2"
@@ -380,27 +133,29 @@ export const Dashboard = () => {
 										</div>
 									</div>
 								</div>
+								{/* Have you ever declared bankruptcy? */}
 								<div className='form-section-wrap'>
 									<div className='form-label-top'>Have you ever declared bankruptcy?</div>
 									<div className=''>
-										<div>
+										<div className='form-radio'>
 											<input 
 												type="radio" 
 												id="choiceBankruptcy1"
 												name="bankruptcy" 
 												value="yes"/>
-											<label htmlFor="choiceBankruptcy2" className='form-label-top'>Yes</label>
+											<label htmlFor="choiceBankruptcy1" className='form-label-top'>Yes</label>
 										</div>
-										<div>
+										<div className='form-radio'>
 											<input 
 												type="radio" 
-												id="choiceBankruptcy1"
+												id="choiceBankruptcy2"
 												name="bankruptcy" 
 												value="no"/>
 											<label htmlFor="choiceBankruptcy2" className='form-label-top'>No</label>
 										</div>
 									</div>
 								</div>
+								{/* Social Security Number (SSN) */}
 								<div className='form-section-wrap'>
 									<div className='form-label-top'>Social Security Number (SSN)</div>
 									<div className='form-line'>
@@ -414,6 +169,7 @@ export const Dashboard = () => {
 										</div>
 									</div>
 								</div>
+								{/* Front Government ID */}
 								<div className='form-section-wrap'>
 									<div className='form-label-top'>Front Government ID</div>
 									<div className='form-line'>
@@ -422,6 +178,7 @@ export const Dashboard = () => {
 										</div>
 									</div>
 								</div>
+								{/* Back Government ID */}
 								<div className='form-section-wrap'>
 									<div className='form-label-top'>Back Government ID</div>
 									<div className='form-line'>
@@ -430,17 +187,15 @@ export const Dashboard = () => {
 										</div>
 									</div>
 								</div>
+								{/* Selfie */}
 								<div className='form-section-wrap'>
-									<div className='form-label-top'>Self Government ID</div>
+									<div className='form-label-top'>Selfie</div>
 									<div className='form-line'>
 										<div className='form-input-wrap-full'>
 											<DragDropFile/>
 										</div>
 									</div>
-								</div>
-								<div className='form-section-wrap'>
-									<div className='form-label-top'>Self Government ID</div>
-									<div className='form-line'>
+									<div className='form-line-selfie'>
 										<div className='form-input-wrap-full'>
 											<div 
 												style={{
@@ -459,6 +214,7 @@ export const Dashboard = () => {
 										</div>
 									</div>
 								</div>
+								{/* Confirm */}
 								<div className='form-section-wrap'>
 									<div className='form-label-top'>Confirm</div>
 									<div className='form-line'>
@@ -473,43 +229,8 @@ export const Dashboard = () => {
 										</div>
 									</div>
 								</div>
-								<div className='form-section-wrap'>
-									<div className='form-label-top'>Payment Method</div>
-									<div className=''>
-										<div>
-											<input 
-												type="radio" 
-												id="choiceCashApp"
-												name="cashapp" 
-												value="cashapp"/>
-											<label htmlFor="choiceCashApp" className='form-label-top'>CashApp</label>
-										</div>
-										<div>
-											<input 
-												type="radio" 
-												id="choiceApplePay"
-												name="applepay" 
-												value="applepay"/>
-											<label htmlFor="choiceApplePay" className='form-label-top'>Apple Pay</label>
-										</div>
-										<div>
-											<input 
-												type="radio" 
-												id="choiceZelle"
-												name="zelle" 
-												value="zelle"/>
-											<label htmlFor="choiceZelle" className='form-label-top'>Zelle</label>
-										</div>
-										<div>
-											<input 
-												type="radio" 
-												id="choiceBitcoin"
-												name="bitcoin" 
-												value="bitcoin"/>
-											<label htmlFor="choiceBitcoin" className='form-label-top'>Bitcoin</label>
-										</div>
-									</div>
-								</div>
+									<PaymentMethod/>
+								{/* Signature */}
 								<div className='form-section-wrap'>
 									<div className='form-label-top'>Signature</div>
 									<div className='form-line'>

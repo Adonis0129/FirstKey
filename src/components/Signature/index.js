@@ -19,14 +19,16 @@ export const Signature = () => {
   }, [signature]);
 
   return (
-    <div>
+    <div className='signature-view'>
       <SignatureCanvas 
         penColor="black"
         canvasProps={{className: 'signature'}}
         ref={sigRef}
         onEnd={handleSignatureEnd}
       />
-      <button onClick={clearSignature}>Clear</button>
+      <div className='clear-button-wrap'>
+        <button className='clear-button' onClick={clearSignature}>Clear</button>
+      </div>
     </div>
   )
 } 
