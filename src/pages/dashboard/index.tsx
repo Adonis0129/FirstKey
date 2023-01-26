@@ -4,6 +4,7 @@ import RentImg from '../../assets/images/rent.jpg'
 import FirstKeyImg from '../../assets/images/first-key.png'
 import { DateInput } from '../../components/DateInput';
 import { DragDropFile } from '../../components/DragAndDrop';
+import { Signature } from '../../components/Signature';
 
 import './dashboard.scss'
 
@@ -513,11 +514,7 @@ export const Dashboard = () => {
 									<div className='form-label-top'>Signature</div>
 									<div className='form-line'>
 										<div className='form-input-wrap-full'>
-											<input
-												id='fileUpload' 
-												type='file' 
-												multiple
-											/>
+											<Signature/>
 										</div>
 									</div>
 								</div>
