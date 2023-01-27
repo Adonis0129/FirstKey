@@ -2,7 +2,7 @@ import React, { useRef, useState, useEffect } from 'react';
 import SignatureCanvas from 'react-signature-canvas';
 import './signature.scss';
 
-export const Signature = () => {
+export const SignaturePad = () => {
 
   const sigRef = useRef()
   const [signature, setSignature] = useState(null);

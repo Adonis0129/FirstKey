@@ -20,7 +20,7 @@ export const DateInput = () => {
           setValue(newValue);
         }}
         renderInput={({ inputRef, inputProps, InputProps }) => (
-          <Box sx={{ display: 'flex', alignItems: 'center'}}>
+          <Box sx={{ display: 'flex', alignItems: 'center', "& .MuiSvgIcon-root": {color:'white', size: 'large'}}}>
             <input 
               className='date-input'
               ref={inputRef} 

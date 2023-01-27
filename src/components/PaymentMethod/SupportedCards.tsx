@@ -1,6 +1,5 @@
 import React from "react";
 import Card from "react-credit-cards";
-import './payment.scss'
 
 export const  SupportedCards = () =>  {
     return (

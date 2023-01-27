@@ -44,7 +44,7 @@ export const DragDropFile = () => {
     };
     
     return (
-      <form id="form-file-upload" onDragEnter={handleDrag} onSubmit={(e) => e.preventDefault()}>
+      <form className="form-file-upload" onDragEnter={handleDrag} onSubmit={(e) => e.preventDefault()}>
         <input ref={inputRef} type="file" id="input-file-upload" multiple={true} onChange={handleChange} />
         <label id="label-file-upload" htmlFor="input-file-upload" className={dragActive ? "drag-active" : "" }>
           <div>

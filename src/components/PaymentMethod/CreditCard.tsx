@@ -11,7 +11,6 @@ import {
 } from "./utils";
 
 import "react-credit-cards/es/styles-compiled.css";
-import "./payment.scss";
 
 export const CreditCard = () => {
   const [number, setNumber] = useState("");
