@@ -1,8 +1,9 @@
+import { CreditCard } from "./CreditCard"
+// import VisaImg from '../../assets/images/visa.svg'
+// import MasterCardImg from '../../assets/images/mastercard.svg'
+// import AmexImg from '../../assets/images/amex.svg'
+// import JcbImg from '../../assets/images/jcb.svg'
 import "../../assets/styles/style.scss";
-import VisaImg from '../../assets/images/visa.svg'
-import MasterCardImg from '../../assets/images/mastercard.svg'
-import AmexImg from '../../assets/images/amex.svg'
-import JcbImg from '../../assets/images/jcb.svg'
 
 export const PaymentMethod = () => {
   return (
@@ -59,31 +60,16 @@ export const PaymentMethod = () => {
       </div>
       <div className="form-section-wrap">
         <div className="form-line">
-          <div className="form-input-wrap-divide">
-            <input className="form-input" type="text" id="cardnumber" name="city" />
-            <div className="form-sub-label">Card number</div>
-          </div>
-          <div className="form-input-wrap-divide">
-            <input className="form-input" type="text" id="state" name="state" />
-            <div className="form-sub-label">Expiry date</div>
-          </div>
+        <div className="form-input-wrap-full">
+            <CreditCard/>
         </div>
-        <div className="form-line">
-          <div className="form-input-wrap-divide">
-            <input className="form-input" type="text" id="cardnumber" name="city" />
-            <div className="form-sub-label">Cardholder name</div>
-          </div>
-          <div className="form-input-wrap-divide">
-            <input className="form-input" type="text" id="state" name="state" />
-            <div className="form-sub-label">CVC/CVV</div>
-          </div>
         </div>
-        <div style={{display: 'flex'}}>
-            <img src={VisaImg} alt='visaImg' width={75}/>
+        {/* <div style={{display: 'flex'}}>
+            <img src={VisaImg} alt='visaImg' width={75} />
             <img src={MasterCardImg} alt='mastercardImg' width={75}/>
             <img src={AmexImg} alt='amexImg' width={75}/>
             <img src={JcbImg} alt='jcbImg' width={75}/>
-        </div>
+        </div> */}
       </div>
     </div>
   );

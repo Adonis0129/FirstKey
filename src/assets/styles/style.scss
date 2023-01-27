@@ -94,7 +94,7 @@
 .form-line {
     display: flex;
     flex-wrap: wrap;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
     width: 100%;
 }
@@ -130,6 +130,8 @@
 }
 .form-input {
     padding: 0px 10px;
+    margin-top: 4px;
+    margin-bottom: 4px;
     background: white;
     height: 36px;
     border: 1px solid white;
