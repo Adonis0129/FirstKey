@@ -138,6 +138,13 @@
     border-radius: 4px;
     width: 100%;
     box-sizing: border-box;
+    transition: 180ms box-shadow ease-in-out;
+    &:focus {
+        outline: 0;
+        box-shadow: 0 0 0 3px #ff9b4f;
+        border-color: rgba(201, 97, 0, 1);
+   
+    }
 }
 .form-sub-label {
     font-size: 12px;
@@ -153,4 +160,10 @@
     width: 100%;
     font-size: 16px;
     box-sizing: border-box;
+    &:focus {
+        outline: 0;
+        box-shadow: 0 0 0 3px #ff9b4f;
+        border-color: rgba(201, 97, 0, 1);
+   
+    }
 }

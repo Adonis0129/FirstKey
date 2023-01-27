@@ -5,7 +5,7 @@ import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs'
 import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider'
 import { DatePicker } from '@mui/x-date-pickers/DatePicker'
 
-import './date-input.scss'
+import '../../assets/styles/style.scss';
 
 export const DateInput = () => {
   
@@ -22,7 +22,7 @@ export const DateInput = () => {
         renderInput={({ inputRef, inputProps, InputProps }) => (
           <Box sx={{ display: 'flex', alignItems: 'center', "& .MuiSvgIcon-root": {color:'white', size: 'large'}}}>
             <input 
-              className='date-input'
+              className='form-input'
               ref={inputRef} 
               {...inputProps} 
             />
