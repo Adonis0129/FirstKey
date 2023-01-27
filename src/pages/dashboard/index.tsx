@@ -12,6 +12,7 @@ import { FloorPlan } from '../../components/FloorPlan';
 import { QA } from '../../components/QA';
 import { Government } from '../../components/Government';
 import { PaymentMethod } from '../../components/PaymentMethod';
+import { Agree } from '../../components/Agree';
 import { Signature } from '../../components/Signature';
 
 import '../../assets/styles/style.scss';
@@ -42,6 +43,7 @@ export const Dashboard = () => {
 								<QA/>
 								<Government/>
 								<PaymentMethod/>
+								<Agree/>
 								<Signature/>
 							</div>
 							<div className='form-footer'>
