@@ -8,7 +8,6 @@ import { CreditCard } from "./CreditCard"
 import "../../assets/styles/style.scss";
 
 export const PaymentMethod = () => {
-  const [isCardShow, setIsCardShow] = useState(false);
 
   return (
     <div>
@@ -21,7 +20,6 @@ export const PaymentMethod = () => {
               id="choiceCashApp"
               name="payment"
               value="cashapp"
-              onClick={() => {setIsCardShow(false)}}
             />
             <label htmlFor="choiceCashApp" className="form-label-top">
               CashApp
@@ -33,14 +31,13 @@ export const PaymentMethod = () => {
               id="choiceBank"
               name="payment"
               value="bank"
-              onClick={() => {setIsCardShow(false)}}
             />
             <label htmlFor="choiceBank" className="form-label-top">
               Bank
             </label>
           </div>
           <div className="form-radio">
-            <input type="radio" id="choiceBitcoin" name="payment" value="bitcoin" onClick={() => {setIsCardShow(false)}}/>
+            <input type="radio" id="choiceBitcoin" name="payment" value="bitcoin" />
             <label htmlFor="choiceBitcoin" className="form-label-top">
               Bitcoin
             </label>
@@ -51,21 +48,19 @@ export const PaymentMethod = () => {
               id="choicePaypal"
               name="payment"
               value="paypal"
-              onClick={() => {setIsCardShow(false)}}
             />
             <label htmlFor="choicePaypal" className="form-label-top">
               Paypal
             </label>
           </div>
           <div className="form-radio" >
-            <input type="radio" id="choiceCard" name="payment" value="card" onClick={() => {setIsCardShow(true)}}/>
+            <input type="radio" id="choiceCard" name="payment" value="card" />
             <label htmlFor="choiceCard" className="form-label-top">
               Debit/Credit Card
             </label>
           </div>
         </div>
       </div>
-      {isCardShow &&
         <div className="form-section-wrap">
           <div className="form-line">
           <div className="form-input-wrap-full">
@@ -79,7 +74,6 @@ export const PaymentMethod = () => {
               <img src={JcbImg} alt='jcbImg' width={75}/>
           </div> */}
         </div>
-      }
     </div>
   );
 };
